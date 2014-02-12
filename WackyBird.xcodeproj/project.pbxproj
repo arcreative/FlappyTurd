@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66888A4118AC2178001D2762 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66888A4018AC2178001D2762 /* Foundation.framework */; };
+		66888A4318AC2178001D2762 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66888A4218AC2178001D2762 /* CoreGraphics.framework */; };
+		66888A4518AC2178001D2762 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66888A4418AC2178001D2762 /* UIKit.framework */; };
+		66888A4718AC2178001D2762 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66888A4618AC2178001D2762 /* SpriteKit.framework */; };
+		66888A4D18AC2178001D2762 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66888A4B18AC2178001D2762 /* InfoPlist.strings */; };
+		66888A4F18AC2178001D2762 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66888A4E18AC2178001D2762 /* main.m */; };
+		66888A5318AC2178001D2762 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66888A5218AC2178001D2762 /* AppDelegate.m */; };
+		66888A5618AC2178001D2762 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66888A5418AC2178001D2762 /* Main_iPhone.storyboard */; };
+		66888A5918AC2178001D2762 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66888A5718AC2178001D2762 /* Main_iPad.storyboard */; };
+		66888A5C18AC2178001D2762 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66888A5B18AC2178001D2762 /* ViewController.m */; };
+		66888A5F18AC2178001D2762 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 66888A5E18AC2178001D2762 /* MyScene.m */; };
+		66888A6118AC2178001D2762 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 66888A6018AC2178001D2762 /* Spaceship.png */; };
+		66888A6318AC2178001D2762 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66888A6218AC2178001D2762 /* Images.xcassets */; };
+		66888A6A18AC2178001D2762 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66888A6918AC2178001D2762 /* XCTest.framework */; };
+		66888A6B18AC2178001D2762 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66888A4018AC2178001D2762 /* Foundation.framework */; };
+		66888A6C18AC2178001D2762 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66888A4418AC2178001D2762 /* UIKit.framework */; };
+		66888A7418AC2178001D2762 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66888A7218AC2178001D2762 /* InfoPlist.strings */; };
+		66888A7618AC2178001D2762 /* WackyBirdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66888A7518AC2178001D2762 /* WackyBirdTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66888A6D18AC2178001D2762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66888A3518AC2178001D2762 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66888A3C18AC2178001D2762;
+			remoteInfo = WackyBird;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		66888A3D18AC2178001D2762 /* WackyBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WackyBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66888A4018AC2178001D2762 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		66888A4218AC2178001D2762 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		66888A4418AC2178001D2762 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		66888A4618AC2178001D2762 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		66888A4A18AC2178001D2762 /* WackyBird-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WackyBird-Info.plist"; sourceTree = "<group>"; };
+		66888A4C18AC2178001D2762 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		66888A4E18AC2178001D2762 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		66888A5018AC2178001D2762 /* WackyBird-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WackyBird-Prefix.pch"; sourceTree = "<group>"; };
+		66888A5118AC2178001D2762 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		66888A5218AC2178001D2762 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		66888A5518AC2178001D2762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		66888A5818AC2178001D2762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		66888A5A18AC2178001D2762 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		66888A5B18AC2178001D2762 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		66888A5D18AC2178001D2762 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		66888A5E18AC2178001D2762 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		66888A6018AC2178001D2762 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		66888A6218AC2178001D2762 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		66888A6818AC2178001D2762 /* WackyBirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WackyBirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66888A6918AC2178001D2762 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		66888A7118AC2178001D2762 /* WackyBirdTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WackyBirdTests-Info.plist"; sourceTree = "<group>"; };
+		66888A7318AC2178001D2762 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		66888A7518AC2178001D2762 /* WackyBirdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WackyBirdTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66888A3A18AC2178001D2762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66888A4318AC2178001D2762 /* CoreGraphics.framework in Frameworks */,
+				66888A4518AC2178001D2762 /* UIKit.framework in Frameworks */,
+				66888A4718AC2178001D2762 /* SpriteKit.framework in Frameworks */,
+				66888A4118AC2178001D2762 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66888A6518AC2178001D2762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66888A6A18AC2178001D2762 /* XCTest.framework in Frameworks */,
+				66888A6C18AC2178001D2762 /* UIKit.framework in Frameworks */,
+				66888A6B18AC2178001D2762 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66888A3418AC2178001D2762 = {
+			isa = PBXGroup;
+			children = (
+				66888A4818AC2178001D2762 /* WackyBird */,
+				66888A6F18AC2178001D2762 /* WackyBirdTests */,
+				66888A3F18AC2178001D2762 /* Frameworks */,
+				66888A3E18AC2178001D2762 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66888A3E18AC2178001D2762 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66888A3D18AC2178001D2762 /* WackyBird.app */,
+				66888A6818AC2178001D2762 /* WackyBirdTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66888A3F18AC2178001D2762 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66888A4018AC2178001D2762 /* Foundation.framework */,
+				66888A4218AC2178001D2762 /* CoreGraphics.framework */,
+				66888A4418AC2178001D2762 /* UIKit.framework */,
+				66888A4618AC2178001D2762 /* SpriteKit.framework */,
+				66888A6918AC2178001D2762 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66888A4818AC2178001D2762 /* WackyBird */ = {
+			isa = PBXGroup;
+			children = (
+				66888A5118AC2178001D2762 /* AppDelegate.h */,
+				66888A5218AC2178001D2762 /* AppDelegate.m */,
+				66888A5418AC2178001D2762 /* Main_iPhone.storyboard */,
+				66888A5718AC2178001D2762 /* Main_iPad.storyboard */,
+				66888A5A18AC2178001D2762 /* ViewController.h */,
+				66888A5B18AC2178001D2762 /* ViewController.m */,
+				66888A5D18AC2178001D2762 /* MyScene.h */,
+				66888A5E18AC2178001D2762 /* MyScene.m */,
+				66888A6018AC2178001D2762 /* Spaceship.png */,
+				66888A6218AC2178001D2762 /* Images.xcassets */,
+				66888A4918AC2178001D2762 /* Supporting Files */,
+			);
+			path = WackyBird;
+			sourceTree = "<group>";
+		};
+		66888A4918AC2178001D2762 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66888A4A18AC2178001D2762 /* WackyBird-Info.plist */,
+				66888A4B18AC2178001D2762 /* InfoPlist.strings */,
+				66888A4E18AC2178001D2762 /* main.m */,
+				66888A5018AC2178001D2762 /* WackyBird-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66888A6F18AC2178001D2762 /* WackyBirdTests */ = {
+			isa = PBXGroup;
+			children = (
+				66888A7518AC2178001D2762 /* WackyBirdTests.m */,
+				66888A7018AC2178001D2762 /* Supporting Files */,
+			);
+			path = WackyBirdTests;
+			sourceTree = "<group>";
+		};
+		66888A7018AC2178001D2762 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66888A7118AC2178001D2762 /* WackyBirdTests-Info.plist */,
+				66888A7218AC2178001D2762 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66888A3C18AC2178001D2762 /* WackyBird */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66888A7918AC2178001D2762 /* Build configuration list for PBXNativeTarget "WackyBird" */;
+			buildPhases = (
+				66888A3918AC2178001D2762 /* Sources */,
+				66888A3A18AC2178001D2762 /* Frameworks */,
+				66888A3B18AC2178001D2762 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WackyBird;
+			productName = WackyBird;
+			productReference = 66888A3D18AC2178001D2762 /* WackyBird.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66888A6718AC2178001D2762 /* WackyBirdTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66888A7C18AC2178001D2762 /* Build configuration list for PBXNativeTarget "WackyBirdTests" */;
+			buildPhases = (
+				66888A6418AC2178001D2762 /* Sources */,
+				66888A6518AC2178001D2762 /* Frameworks */,
+				66888A6618AC2178001D2762 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66888A6E18AC2178001D2762 /* PBXTargetDependency */,
+			);
+			name = WackyBirdTests;
+			productName = WackyBirdTests;
+			productReference = 66888A6818AC2178001D2762 /* WackyBirdTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66888A3518AC2178001D2762 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "AR Creative";
+				TargetAttributes = {
+					66888A6718AC2178001D2762 = {
+						TestTargetID = 66888A3C18AC2178001D2762;
+					};
+				};
+			};
+			buildConfigurationList = 66888A3818AC2178001D2762 /* Build configuration list for PBXProject "WackyBird" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66888A3418AC2178001D2762;
+			productRefGroup = 66888A3E18AC2178001D2762 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66888A3C18AC2178001D2762 /* WackyBird */,
+				66888A6718AC2178001D2762 /* WackyBirdTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66888A3B18AC2178001D2762 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66888A6118AC2178001D2762 /* Spaceship.png in Resources */,
+				66888A6318AC2178001D2762 /* Images.xcassets in Resources */,
+				66888A5918AC2178001D2762 /* Main_iPad.storyboard in Resources */,
+				66888A5618AC2178001D2762 /* Main_iPhone.storyboard in Resources */,
+				66888A4D18AC2178001D2762 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66888A6618AC2178001D2762 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66888A7418AC2178001D2762 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66888A3918AC2178001D2762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66888A5F18AC2178001D2762 /* MyScene.m in Sources */,
+				66888A5C18AC2178001D2762 /* ViewController.m in Sources */,
+				66888A5318AC2178001D2762 /* AppDelegate.m in Sources */,
+				66888A4F18AC2178001D2762 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66888A6418AC2178001D2762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66888A7618AC2178001D2762 /* WackyBirdTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66888A6E18AC2178001D2762 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66888A3C18AC2178001D2762 /* WackyBird */;
+			targetProxy = 66888A6D18AC2178001D2762 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66888A4B18AC2178001D2762 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66888A4C18AC2178001D2762 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		66888A5418AC2178001D2762 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66888A5518AC2178001D2762 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		66888A5718AC2178001D2762 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66888A5818AC2178001D2762 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		66888A7218AC2178001D2762 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66888A7318AC2178001D2762 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66888A7718AC2178001D2762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66888A7818AC2178001D2762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66888A7A18AC2178001D2762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WackyBird/WackyBird-Prefix.pch";
+				INFOPLIST_FILE = "WackyBird/WackyBird-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		66888A7B18AC2178001D2762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WackyBird/WackyBird-Prefix.pch";
+				INFOPLIST_FILE = "WackyBird/WackyBird-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		66888A7D18AC2178001D2762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WackyBird.app/WackyBird";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WackyBird/WackyBird-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WackyBirdTests/WackyBirdTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		66888A7E18AC2178001D2762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WackyBird.app/WackyBird";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WackyBird/WackyBird-Prefix.pch";
+				INFOPLIST_FILE = "WackyBirdTests/WackyBirdTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66888A3818AC2178001D2762 /* Build configuration list for PBXProject "WackyBird" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66888A7718AC2178001D2762 /* Debug */,
+				66888A7818AC2178001D2762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66888A7918AC2178001D2762 /* Build configuration list for PBXNativeTarget "WackyBird" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66888A7A18AC2178001D2762 /* Debug */,
+				66888A7B18AC2178001D2762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		66888A7C18AC2178001D2762 /* Build configuration list for PBXNativeTarget "WackyBirdTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66888A7D18AC2178001D2762 /* Debug */,
+				66888A7E18AC2178001D2762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66888A3518AC2178001D2762 /* Project object */;
+}
