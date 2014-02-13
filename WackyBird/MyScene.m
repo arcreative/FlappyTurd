@@ -15,40 +15,87 @@
         //Set view properties
         self.backgroundColor = [SKColor colorWithRed:0.33 green:0.75 blue:0.79 alpha:1.0];
         
-        //Set constants
-        self.gravity = -0.35;
-        self.flapVelocity = 6.5;
-        self.groundHeight = 40;
-        
-        //Create bird
+        //Reset scene
         [self resetScene];
+        
+        //Add background
+        SKNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"Background"];
+        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        background.zPosition = -101;
+        background.name = @"background";
+        [self addChild:background];
+        
+        //Create ground plane
+        SKSpriteNode *ground = [SKSpriteNode spriteNodeWithImageNamed:@"Ground"];
+        ground.anchorPoint = CGPointMake(0, 0);
+        ground.position = CGPointMake(0, 0);
+        ground.zPosition = 0;
+        ground.name = @"ground";
+        [self addChild:ground];
+        
+        //Add scene physics body
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0, ground.frame.size.height - 5, self.frame.size.width, self.frame.size.height - ground.frame.size.height)];
+        
+        //Play
+        [self play];
     }
     return self;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    self.velocity = self.flapVelocity;
-    
-    
-    
-    [self spawnPipes];
+    if (!self.isPlaying) {
+        return;
+    }
+    [self childNodeWithName:@"bird"].physicsBody.velocity = CGVectorMake(0, 450);
+}
 
+-(void)play {
+    if (self.isPlaying) {
+        return;
+    }
+    self.pipeSpawnTimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(spawnPipes) userInfo:nil repeats:YES];
+    self.isPlaying = YES;
+}
+
+-(void)stop {
+    if (!self.isPlaying) {
+        return;
+    }
+    [self.pipeSpawnTimer invalidate];
+    self.pipeSpawnTimer = nil;
+    self.isPlaying = NO;
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    //TODO: Use the timer, this won't work for slower/faster devices
+    if (!self.isPlaying) {
+        return;
+    }
     
-    //Get bird
+    //Get nodes
     SKNode *bird = [self childNodeWithName:@"bird"];
+    SKNode *ground = [self childNodeWithName:@"ground"];
     
-    //Apply gravity
-    self.velocity += self.gravity;
+    //Manage pipes
+    [self enumerateChildNodesWithName:@"pipe" usingBlock:^(SKNode *node, BOOL *stop) {
+        if (node.position.x < -CGRectGetWidth(node.frame)) {
+            [node removeFromParent];
+        } else {
+            node.position = CGPointMake(node.position.x - 2, node.position.y);
+        }
+        if ([bird intersectsNode:node]) {
+            [self stop];
+        }
+    }];
     
-    //Move to new location
-    [bird runAction:[SKAction moveByX:0.0 y:self.velocity duration:0.0]];
-    
-    //Update pipe location
-    [self updatePipes];
+    //Manage ground
+    if (ground.position.x == -24) {
+        ground.position = CGPointMake(0, ground.position.y);
+    } else {
+        ground.position = CGPointMake(ground.position.x - 2, ground.position.y);
+    }
+    if ([ground intersectsNode:bird]) {
+        [self stop];
+    }
 }
 
 -(NSArray*)spawnPipes {
@@ -59,14 +106,17 @@
     
     //Define gap location
     NSInteger gapLocation = arc4random()%100 - 50;
+    int gapSize = 50;
+    int offset = 40;
     
     //Rotate top pipe
     [topPipe runAction:[SKAction rotateToAngle:M_PI duration:0]];
     
     //Positioning
-    topPipe.position = CGPointMake(CGRectGetMaxX(self.frame) + CGRectGetWidth(topPipe.frame) / 2, CGRectGetMaxY(self.frame) + gapLocation);
-    bottomPipe.position = CGPointMake(CGRectGetMaxX(self.frame) + CGRectGetWidth(topPipe.frame) / 2, CGRectGetMinY(self.frame) + gapLocation);
-    
+    topPipe.position = CGPointMake(CGRectGetMaxX(self.frame) + CGRectGetWidth(topPipe.frame) / 2, CGRectGetMaxY(self.frame) + gapLocation + gapSize + offset);
+    topPipe.zPosition = -1;
+    bottomPipe.position = CGPointMake(CGRectGetMaxX(self.frame) + CGRectGetWidth(topPipe.frame) / 2, CGRectGetMinY(self.frame) + gapLocation - gapSize + offset);
+    bottomPipe.zPosition = -1;
     
     //Add pipes to view
     [self addChild:topPipe];
@@ -75,40 +125,22 @@
     return @[topPipe, bottomPipe];
 }
 
--(void)updatePipes {
-    for (SKNode *node in [self children]) {
-        if ([node.name isEqual:@"pipe"]) {
-            if (CGRectGetMinX(node.frame) < -CGRectGetWidth(node.frame)) {
-                [node removeFromParent];
-            } else {
-                [node runAction:[SKAction moveByX:-2 y:0 duration:0.0]];
-            }
-        }
-    }
-}
-
 -(void)resetScene {
-    //Remove old birdie
+    //Respawn birdie
     SKNode *oldBird = [self childNodeWithName:@"bird"];
     if (oldBird.name != nil) {
         [self removeChildrenInArray:@[oldBird]];
     }
-    
-    //Remove old pipes
-    for (SKNode *node in [self children]) {
-        if ([node.name isEqual:@"pipe"]) {
-            [node removeFromParent];
-        }
-    }
-    
-    //Set/reset variables
-    self.velocity = 0.0;
-    
-    //Spawn birdie
     SKSpriteNode *bird = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
     bird.name = @"bird";
     bird.position = CGPointMake(CGRectGetWidth(self.frame) * 0.3, CGRectGetMidY(self.frame));
+    bird.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:bird.size];
     [self addChild:bird];
+    
+    //Remove old pipes
+    [self enumerateChildNodesWithName:@"pipe" usingBlock:^(SKNode *node, BOOL *stop) {
+        [node removeFromParent];
+    }];
 }
 
 @end

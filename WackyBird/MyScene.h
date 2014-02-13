@@ -10,9 +10,7 @@
 
 @interface MyScene : SKScene
 
-@property (nonatomic, assign) float gravity;
-@property (nonatomic, assign) float velocity;
-@property (nonatomic, assign) float flapVelocity;
-@property (nonatomic, assign) int groundHeight;
+@property (nonatomic, assign) BOOL isPlaying;
+@property (nonatomic) NSTimer *pipeSpawnTimer;
 
 @end
