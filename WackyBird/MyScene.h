@@ -1,6 +1,6 @@
 //
 //  MyScene.h
-//  WackyBird
+//  FlappyTurd
 //
 
 //  Copyright (c) 2014 AR Creative. All rights reserved.

@@ -26,7 +26,7 @@
 		66888A6B18AC2178001D2762 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66888A4018AC2178001D2762 /* Foundation.framework */; };
 		66888A6C18AC2178001D2762 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66888A4418AC2178001D2762 /* UIKit.framework */; };
 		66888A7418AC2178001D2762 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66888A7218AC2178001D2762 /* InfoPlist.strings */; };
-		66888A7618AC2178001D2762 /* WackyBirdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66888A7518AC2178001D2762 /* WackyBirdTests.m */; };
+		66888A7618AC2178001D2762 /* FlappyTurdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66888A7518AC2178001D2762 /* FlappyTurdTests.m */; };
 		66888A8318AC3CA4001D2762 /* Pipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 66888A8218AC3CA4001D2762 /* Pipe.png */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +36,7 @@
 			containerPortal = 66888A3518AC2178001D2762 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 66888A3C18AC2178001D2762;
-			remoteInfo = WackyBird;
+			remoteInfo = FlappyTurd;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -50,23 +50,23 @@
 		66888A4618AC2178001D2762 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		66888A4A18AC2178001D2762 /* FlappyTurd-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlappyTurd-Info.plist"; sourceTree = "<group>"; };
 		66888A4C18AC2178001D2762 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		66888A4E18AC2178001D2762 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		66888A4E18AC2178001D2762 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		66888A5018AC2178001D2762 /* FlappyTurd-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlappyTurd-Prefix.pch"; sourceTree = "<group>"; };
-		66888A5118AC2178001D2762 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		66888A5218AC2178001D2762 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		66888A5118AC2178001D2762 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		66888A5218AC2178001D2762 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		66888A5518AC2178001D2762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		66888A5818AC2178001D2762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		66888A5A18AC2178001D2762 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		66888A5B18AC2178001D2762 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		66888A5D18AC2178001D2762 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
-		66888A5E18AC2178001D2762 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		66888A5A18AC2178001D2762 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		66888A5B18AC2178001D2762 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		66888A5D18AC2178001D2762 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MyScene.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		66888A5E18AC2178001D2762 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MyScene.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		66888A6018AC2178001D2762 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		66888A6218AC2178001D2762 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		66888A6818AC2178001D2762 /* FlappyTurdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyTurdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66888A6918AC2178001D2762 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		66888A7118AC2178001D2762 /* FlappyTurdTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlappyTurdTests-Info.plist"; sourceTree = "<group>"; };
 		66888A7318AC2178001D2762 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		66888A7518AC2178001D2762 /* WackyBirdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WackyBirdTests.m; sourceTree = "<group>"; };
+		66888A7518AC2178001D2762 /* FlappyTurdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FlappyTurdTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		66888A8218AC3CA4001D2762 /* Pipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pipe.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,7 +142,7 @@
 				66888A4918AC2178001D2762 /* Supporting Files */,
 			);
 			name = FlappyTurd;
-			path = WackyBird;
+			path = FlappyTurd;
 			sourceTree = "<group>";
 		};
 		66888A4918AC2178001D2762 /* Supporting Files */ = {
@@ -159,11 +159,11 @@
 		66888A6F18AC2178001D2762 /* FlappyTurdTests */ = {
 			isa = PBXGroup;
 			children = (
-				66888A7518AC2178001D2762 /* WackyBirdTests.m */,
+				66888A7518AC2178001D2762 /* FlappyTurdTests.m */,
 				66888A7018AC2178001D2762 /* Supporting Files */,
 			);
 			name = FlappyTurdTests;
-			path = WackyBirdTests;
+			path = FlappyTurdTests;
 			sourceTree = "<group>";
 		};
 		66888A7018AC2178001D2762 /* Supporting Files */ = {
@@ -202,7 +202,7 @@
 			dependencies = (
 			);
 			name = FlappyTurd;
-			productName = WackyBird;
+			productName = FlappyTurd;
 			productReference = 66888A3D18AC2178001D2762 /* FlappyTurd.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -220,7 +220,7 @@
 				66888A6E18AC2178001D2762 /* PBXTargetDependency */,
 			);
 			name = FlappyTurdTests;
-			productName = WackyBirdTests;
+			productName = FlappyTurdTests;
 			productReference = 66888A6818AC2178001D2762 /* FlappyTurdTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -302,7 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66888A7618AC2178001D2762 /* WackyBirdTests.m in Sources */,
+				66888A7618AC2178001D2762 /* FlappyTurdTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,8 +433,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WackyBird/FlappyTurd-Prefix.pch";
-				INFOPLIST_FILE = "WackyBird/FlappyTurd-Info.plist";
+				GCC_PREFIX_HEADER = "FlappyTurd/FlappyTurd-Prefix.pch";
+				INFOPLIST_FILE = "FlappyTurd/FlappyTurd-Info.plist";
 				PRODUCT_NAME = FlappyTurd;
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -448,8 +448,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WackyBird/FlappyTurd-Prefix.pch";
-				INFOPLIST_FILE = "WackyBird/FlappyTurd-Info.plist";
+				GCC_PREFIX_HEADER = "FlappyTurd/FlappyTurd-Prefix.pch";
+				INFOPLIST_FILE = "FlappyTurd/FlappyTurd-Info.plist";
 				PRODUCT_NAME = FlappyTurd;
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -460,19 +460,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WackyBird.app/WackyBird";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlappyTurd.app/FlappyTurd";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WackyBird/WackyBird-Prefix.pch";
+				GCC_PREFIX_HEADER = "FlappyTurd/FlappyTurd-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "WackyBirdTests/FlappyTurdTests-Info.plist";
+				INFOPLIST_FILE = "FlappyTurdTests/FlappyTurdTests-Info.plist";
 				PRODUCT_NAME = FlappyTurdTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -483,15 +483,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WackyBird.app/WackyBird";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlappyTurd.app/FlappyTurd";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WackyBird/WackyBird-Prefix.pch";
-				INFOPLIST_FILE = "WackyBirdTests/FlappyTurdTests-Info.plist";
+				GCC_PREFIX_HEADER = "FlappyTurd/FlappyTurd-Prefix.pch";
+				INFOPLIST_FILE = "FlappyTurdTests/FlappyTurdTests-Info.plist";
 				PRODUCT_NAME = FlappyTurdTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

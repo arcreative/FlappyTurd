@@ -1,6 +1,6 @@
 //
-//  WackyBirdTests.m
-//  WackyBirdTests
+//  FlappyTurdTests.m
+//  FlappyTurdTests
 //
 //  Created by Adam Robertson on 2/12/14.
 //  Copyright (c) 2014 AR Creative. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface WackyBirdTests : XCTestCase
+@interface FlappyTurdTests : XCTestCase
 
 @end
 
-@implementation WackyBirdTests
+@implementation FlappyTurdTests
 
 - (void)setUp
 {
