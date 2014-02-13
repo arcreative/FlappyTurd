@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "66888A3C18AC2178001D2762"
-               BuildableName = "WackyBird.app"
-               BlueprintName = "WackyBird"
-               ReferencedContainer = "container:WackyBird.xcodeproj">
+               BuildableName = "FlappyTurd.app"
+               BlueprintName = "FlappyTurd"
+               ReferencedContainer = "container:FlappyTurd.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "66888A6718AC2178001D2762"
-               BuildableName = "WackyBirdTests.xctest"
-               BlueprintName = "WackyBirdTests"
-               ReferencedContainer = "container:WackyBird.xcodeproj">
+               BuildableName = "FlappyTurdTests.xctest"
+               BlueprintName = "FlappyTurdTests"
+               ReferencedContainer = "container:FlappyTurd.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "66888A3C18AC2178001D2762"
-            BuildableName = "WackyBird.app"
-            BlueprintName = "WackyBird"
-            ReferencedContainer = "container:WackyBird.xcodeproj">
+            BuildableName = "FlappyTurd.app"
+            BlueprintName = "FlappyTurd"
+            ReferencedContainer = "container:FlappyTurd.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "66888A3C18AC2178001D2762"
-            BuildableName = "WackyBird.app"
-            BlueprintName = "WackyBird"
-            ReferencedContainer = "container:WackyBird.xcodeproj">
+            BuildableName = "FlappyTurd.app"
+            BlueprintName = "FlappyTurd"
+            ReferencedContainer = "container:FlappyTurd.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "66888A3C18AC2178001D2762"
-            BuildableName = "WackyBird.app"
-            BlueprintName = "WackyBird"
-            ReferencedContainer = "container:WackyBird.xcodeproj">
+            BuildableName = "FlappyTurd.app"
+            BlueprintName = "FlappyTurd"
+            ReferencedContainer = "container:FlappyTurd.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

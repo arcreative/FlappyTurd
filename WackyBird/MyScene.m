@@ -12,42 +12,103 @@
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
-        /* Setup your scene here */
+        //Set view properties
+        self.backgroundColor = [SKColor colorWithRed:0.33 green:0.75 blue:0.79 alpha:1.0];
         
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
+        //Set constants
+        self.gravity = -0.35;
+        self.flapVelocity = 6.5;
+        self.groundHeight = 40;
         
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
-        
-        [self addChild:myLabel];
+        //Create bird
+        [self resetScene];
     }
     return self;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
+    self.velocity = self.flapVelocity;
     
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
-    }
+    
+    
+    [self spawnPipes];
+
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
+    //TODO: Use the timer, this won't work for slower/faster devices
+    
+    //Get bird
+    SKNode *bird = [self childNodeWithName:@"bird"];
+    
+    //Apply gravity
+    self.velocity += self.gravity;
+    
+    //Move to new location
+    [bird runAction:[SKAction moveByX:0.0 y:self.velocity duration:0.0]];
+    
+    //Update pipe location
+    [self updatePipes];
+}
+
+-(NSArray*)spawnPipes {
+    SKNode *topPipe = [SKSpriteNode spriteNodeWithImageNamed:@"Pipe"];
+    SKNode *bottomPipe = [SKSpriteNode spriteNodeWithImageNamed:@"Pipe"];
+    topPipe.name = @"pipe";
+    bottomPipe.name = @"pipe";
+    
+    //Define gap location
+    NSInteger gapLocation = arc4random()%100 - 50;
+    
+    //Rotate top pipe
+    [topPipe runAction:[SKAction rotateToAngle:M_PI duration:0]];
+    
+    //Positioning
+    topPipe.position = CGPointMake(CGRectGetMaxX(self.frame) + CGRectGetWidth(topPipe.frame) / 2, CGRectGetMaxY(self.frame) + gapLocation);
+    bottomPipe.position = CGPointMake(CGRectGetMaxX(self.frame) + CGRectGetWidth(topPipe.frame) / 2, CGRectGetMinY(self.frame) + gapLocation);
+    
+    
+    //Add pipes to view
+    [self addChild:topPipe];
+    [self addChild:bottomPipe];
+    
+    return @[topPipe, bottomPipe];
+}
+
+-(void)updatePipes {
+    for (SKNode *node in [self children]) {
+        if ([node.name isEqual:@"pipe"]) {
+            if (CGRectGetMinX(node.frame) < -CGRectGetWidth(node.frame)) {
+                [node removeFromParent];
+            } else {
+                [node runAction:[SKAction moveByX:-2 y:0 duration:0.0]];
+            }
+        }
+    }
+}
+
+-(void)resetScene {
+    //Remove old birdie
+    SKNode *oldBird = [self childNodeWithName:@"bird"];
+    if (oldBird.name != nil) {
+        [self removeChildrenInArray:@[oldBird]];
+    }
+    
+    //Remove old pipes
+    for (SKNode *node in [self children]) {
+        if ([node.name isEqual:@"pipe"]) {
+            [node removeFromParent];
+        }
+    }
+    
+    //Set/reset variables
+    self.velocity = 0.0;
+    
+    //Spawn birdie
+    SKSpriteNode *bird = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
+    bird.name = @"bird";
+    bird.position = CGPointMake(CGRectGetWidth(self.frame) * 0.3, CGRectGetMidY(self.frame));
+    [self addChild:bird];
 }
 
 @end
