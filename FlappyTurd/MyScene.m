@@ -19,7 +19,7 @@
         [self resetScene];
         
         //Add background
-        SKNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"Background"];
+        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"Background"];
         background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
         background.zPosition = -101;
         background.name = @"background";
@@ -75,6 +75,10 @@
     SKNode *bird = [self childNodeWithName:@"bird"];
     SKNode *ground = [self childNodeWithName:@"ground"];
     
+    //Update rotation
+    float angle = bird.physicsBody.velocity.dy / 800;
+    [bird runAction:[SKAction rotateToAngle:angle duration:0.1]];
+    
     //Manage pipes
     [self enumerateChildNodesWithName:@"pipe" usingBlock:^(SKNode *node, BOOL *stop) {
         if (node.position.x < -CGRectGetWidth(node.frame)) {
@@ -99,8 +103,8 @@
 }
 
 -(NSArray*)spawnPipes {
-    SKNode *topPipe = [SKSpriteNode spriteNodeWithImageNamed:@"Pipe"];
-    SKNode *bottomPipe = [SKSpriteNode spriteNodeWithImageNamed:@"Pipe"];
+    SKSpriteNode *topPipe = [SKSpriteNode spriteNodeWithImageNamed:@"Pipe"];
+    SKSpriteNode *bottomPipe = [SKSpriteNode spriteNodeWithImageNamed:@"Pipe"];
     topPipe.name = @"pipe";
     bottomPipe.name = @"pipe";
     
@@ -127,7 +131,7 @@
 
 -(void)resetScene {
     //Respawn birdie
-    SKNode *oldBird = [self childNodeWithName:@"bird"];
+    SKSpriteNode *oldBird = [self childNodeWithName:@"bird"];
     if (oldBird.name != nil) {
         [self removeChildrenInArray:@[oldBird]];
     }
